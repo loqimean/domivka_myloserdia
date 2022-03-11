@@ -70,3 +70,5 @@ end
 
 
 gem "tailwindcss_merger", "~> 0.1.0"
+
+gem "devise", "~> 4.8"
