@@ -67,3 +67,5 @@ group :development do
   # gem "spring"
 end
 
+
+gem "tailwindcss_merger", "~> 0.1.0"
