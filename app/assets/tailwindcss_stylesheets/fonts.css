@@ -1,7 +1,7 @@
 @layer base {
   @font-face {
     font-family: Comfortaa;
-    src: url('comfortaa.ttf');
+    src: url('comfortaa/comfortaa.ttf');
     font-weight: 400;
     font-style: normal;
   }

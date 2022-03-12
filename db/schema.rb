@@ -15,14 +15,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_11_195619) do
   enable_extension "plpgsql"
 
   create_table "site_settings", force: :cascade do |t|
-    t.text "idea_of_project"
+    t.text "uk_idea_of_project"
+    t.text "en_idea_of_project"
     t.string "main_photo"
     t.text "adress"
     t.string "payment_details"
     t.string "email"
-    t.string "facebook"
-    t.string "instagram"
-    t.string "telegram"
+    t.string "facebook_url"
+    t.string "instagram_url"
+    t.string "telegram_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

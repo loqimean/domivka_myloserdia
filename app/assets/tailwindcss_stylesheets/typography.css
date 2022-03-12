@@ -1,0 +1,11 @@
+@layer base {
+  h1 {
+    @apply font-comfortaa text-4xxl leading-13 md:text-7xs md:leading-16;
+  }
+}
+
+@layer components {
+  .body-1-long {
+    @apply text-lg font-normal leading-7 font-comfortaa;
+  }
+}
