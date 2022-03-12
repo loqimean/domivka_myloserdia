@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/', to: 'home#redirection', as: :root_redirection
+
+  scope '/:locale', locale: /uk|en/ do
+    root to: 'home#index'
+  end
+
+  namespace :account do
+    root 'site_settings#index'
+  end
 end

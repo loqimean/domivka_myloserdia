@@ -1,13 +1,50 @@
+/* GENERATED FILE! */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  input[type=file]::-webkit-file-upload-button,
+  input[type=file]::file-selector-button {
+    @apply text-white bg-indigo-600 hover:bg-indigo-700 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
+    margin-inline-start: -1rem;
+    margin-inline-end: 1rem;
+  }
+
+  abbr[title=required] {
+    @apply !text-red-500 no-underline;
+  }
+
+  .responsive-container {
+    @apply px-5 lg:px-8 xl:px-15 3xl:px-78;
   }
 }
 
-*/
+@layer base {
+  @font-face {
+    font-family: Comfortaa;
+    src: url('comfortaa/comfortaa.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: Comfortaa;
+    src: url('comfortaa/static/Comfortaa-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply font-comfortaa text-4xxl leading-13 md:text-7xs md:leading-16;
+  }
+}
+
+@layer components {
+  .body-1-long {
+    @apply text-lg font-normal leading-7 font-comfortaa;
+  }
+}
+

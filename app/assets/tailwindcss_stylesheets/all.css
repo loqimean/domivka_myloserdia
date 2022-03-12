@@ -1,13 +1,16 @@
-
 @layer components {
-    input[type=file]::-webkit-file-upload-button,
-    input[type=file]::file-selector-button {
-        @apply text-white bg-indigo-600 hover:bg-indigo-700 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
-        margin-inline-start: -1rem;
-        margin-inline-end: 1rem;
-    }
+  input[type=file]::-webkit-file-upload-button,
+  input[type=file]::file-selector-button {
+    @apply text-white bg-indigo-600 hover:bg-indigo-700 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
+    margin-inline-start: -1rem;
+    margin-inline-end: 1rem;
+  }
 
-    abbr[title=required] {
-        @apply !text-red-500 no-underline;
-    }
+  abbr[title=required] {
+    @apply !text-red-500 no-underline;
+  }
+
+  .responsive-container {
+    @apply px-5 lg:px-8 xl:px-15 3xl:px-78;
+  }
 }
