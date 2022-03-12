@@ -12,4 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require swiper-bundle.min.css
  */
+
+ .swiper-button-next::after, .swiper-button-prev::after {
+   color: white;
+   opacity: 0.3;
+ }

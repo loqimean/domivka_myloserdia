@@ -12,7 +12,9 @@
   </head>
 
   <body class="bg-gray-50">
-    <%= render 'shared/header' %>
-    <%= yield %>
+    <%= render 'account/shared/header' %>
+    <main class="container flex px-5 mx-auto mt-28">
+      <%= yield %>
+    </main>
   </body>
 </html>

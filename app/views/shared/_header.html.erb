@@ -1,0 +1,11 @@
+<nav class="flex justify-center p-5 bg-white shadow-md">
+  <%= link_to root_path, class: 'flex ml-auto' do %>
+    <p class="hidden mr-2 sm:inline">Благодійний фонд</p>
+    <span class="font-bold font-comfortaa">“Домівка Милосердя”</span>
+  <% end %>
+  <div class="ml-auto">
+    <%= link_to 'Ук', root_redirection_path(locale: :uk), class: ('font-bold' if I18n.locale == :uk) %>
+    <span> | </span>
+    <%= link_to 'En', root_redirection_path(locale: :en), class: ('font-bold' if I18n.locale == :en) %>
+  </div>
+</nav>
