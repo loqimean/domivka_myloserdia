@@ -12,9 +12,11 @@
   </head>
 
   <body class="bg-gray-50">
+    <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
     <div class="pt-[64px]">
       <%= yield %>
     </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

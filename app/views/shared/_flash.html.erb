@@ -1,0 +1,16 @@
+<% flash.each do |key, message| %>
+  <div id="flash" class="z-20 flash flash-show" data-controller="flash">
+    <div class="m-auto">
+      <div class="p-3 bg-white border border-gray-300 rounded-lg shadow-lg">
+        <div class="flex flex-row items-center">
+          <div class="px-2">
+            <%= flash_icon(key) %>
+          </div>
+          <div class="ml-2 mr-6">
+            <span class="font-semibold"><%= message %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,32 +1,53 @@
 <!-- Situation Photos -->
-<section>
-  <div class="swiper swiper-container" data-controller="carousel"
-      data-carousel-options-value='{"autoplay": {"delay": 2500, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
-    <div class="swiper-wrapper">
-      <% @situation_photos.each do |photo| %>
-        <div class="flex justify-center swiper-slide">
-          <%= image_tag photo.photo.url %>
-        </div>
-      <% end %>
+<% if @situation_photos.present? %>
+  <section>
+    <div class="swiper swiper-container" data-controller="carousel"
+        data-carousel-options-value='{"autoplay": {"delay": 2500, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
+      <div class="swiper-wrapper">
+        <% @situation_photos.each do |photo| %>
+          <div class="flex justify-center swiper-slide">
+            <%= image_tag photo.photo.url %>
+          </div>
+        <% end %>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+  </section>
+<% end %>
+<!-- Payment details -->
+<section class="py-10 responsive-container">
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div class="flex flex-col items-center py-5">
+      <%= image_tag 'icons/map.svg', class: 'w-6 mb-5' %>
+      <p class="body 1-short"><%= @site_settings&.send(:"#{I18n.locale}_address") %></p>
+    </div>
+    <div class="flex flex-col items-center py-5">
+      <%= image_tag 'icons/cash.svg', class: 'w-6 mb-5' %>
+      <p class="px-10 body 1-short md:px-0"><%= @site_settings&.send(:"#{I18n.locale}_payment_details") %></p>
+    </div>
+    <div class="flex flex-col items-center py-5">
+      <%= image_tag 'icons/mail-open.svg', class: 'w-6 mb-5' %>
+      <p class="body 1-short"><%= @site_settings&.email %></p>
+    </div>
   </div>
 </section>
 <!-- About -->
 <section class="py-10 responsive-container">
-  <h1 class="mb-5"><%= t('.activity-title') %></h1>
+  <h1 class="mb-5 md:text-5xl"><%= t('.activity-title') %></h1>
   <div class="grid grid-cols-1 md:grid-cols-2">
-    <div class="flex flex-col items-center md:p-10">
-      <p class="mb-3 body-1-long"><%= @site_settings.send(:"#{I18n.locale}_idea_of_project") %></p>
+    <div class="flex flex-col items-center mb-5 md:py-10">
+      <p class="mb-3 body-1-long"><%= @site_settings&.send(:"#{I18n.locale}_idea_of_project") %></p>
       <div class="hidden md:block">
         <%= render 'home/social-networks', site_settings: @site_settings %>
       </div>
     </div>
     <div class="mb-3 md:mb-0 md:p-5">
-      <%= image_tag @site_settings.main_photo.url %>
+      <% if @site_settings.present? %>
+        <%= image_tag @site_settings.main_photo.url %>
+      <% end %>
     </div>
-    <div class="block md:hidden">
+    <div class="flex justify-center md:hidden">
       <%= render 'home/social-networks', site_settings: @site_settings %>
     </div>
   </div>

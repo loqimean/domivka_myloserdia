@@ -82,3 +82,4 @@ gem "tailwindcss_merger", "~> 0.1.0"
 gem "devise", "~> 4.8"
 
 gem "carrierwave", "~> 2.2"
+gem 'kaminari'

@@ -13,4 +13,8 @@
   .responsive-container {
     @apply px-5 lg:px-8 xl:px-15 3xl:px-78;
   }
+
+  .flash {
+    @apply absolute flex w-full max-w-sm m-3 -right-96 top-10 lg:m-0 lg:w-fit;
+  }
 }
