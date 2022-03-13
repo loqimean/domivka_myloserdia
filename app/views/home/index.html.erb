@@ -1,0 +1,33 @@
+<!-- Situation Photos -->
+<section>
+  <div class="swiper swiper-container" data-controller="carousel"
+      data-carousel-options-value='{"autoplay": {"delay": 2500, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
+    <div class="swiper-wrapper">
+      <% @situation_photos.each do |photo| %>
+        <div class="flex justify-center swiper-slide">
+          <%= image_tag photo.photo.url %>
+        </div>
+      <% end %>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+<!-- About -->
+<section class="py-10 responsive-container">
+  <h1 class="mb-5"><%= t('.activity-title') %></h1>
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="flex flex-col items-center md:p-10">
+      <p class="mb-3 body-1-long"><%= @site_settings.send(:"#{I18n.locale}_idea_of_project") %></p>
+      <div class="hidden md:block">
+        <%= render 'home/social-networks', site_settings: @site_settings %>
+      </div>
+    </div>
+    <div class="mb-3 md:mb-0 md:p-5">
+      <%= image_tag @site_settings.main_photo.url %>
+    </div>
+    <div class="block md:hidden">
+      <%= render 'home/social-networks', site_settings: @site_settings %>
+    </div>
+  </div>
+</section>
