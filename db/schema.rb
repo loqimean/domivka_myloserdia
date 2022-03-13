@@ -14,21 +14,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_13_153000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "activity_photos", force: :cascade do |t|
-    t.string "photo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "invoices", force: :cascade do |t|
     t.string "file", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "payments", force: :cascade do |t|
-    t.string "sum"
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_13_153000) do
   end
 
   create_table "situation_photos", force: :cascade do |t|
-    t.string "photo"
+    t.string "photo", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
