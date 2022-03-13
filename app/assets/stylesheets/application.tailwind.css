@@ -18,6 +18,20 @@
   .responsive-container {
     @apply px-5 lg:px-8 xl:px-15 3xl:px-78;
   }
+
+  .flash {
+    @apply absolute flex w-full max-w-sm m-3 -right-96 top-10 lg:m-0 lg:w-fit;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply p-3 text-center rounded-md cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply text-white bg-blue-600 btn;
+  }
 }
 
 @layer base {
@@ -36,15 +50,41 @@
   }
 }
 
+@layer components {
+  .table-element {
+    @apply w-full divide-y divide-gray-200;
+  }
+
+  .table-element > thead {
+    @apply bg-gray-50;
+  }
+
+  .table-element > thead > tr > th {
+    @apply px-3 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase;
+  }
+
+  .table-element > tbody {
+    @apply bg-white divide-y divide-gray-200;
+  }
+
+  .table-element > tbody > tr > td {
+    @apply py-3 px-3 !whitespace-normal;
+  }
+}
+
 @layer base {
   h1 {
-    @apply font-comfortaa text-4xxl leading-13 md:text-7xs md:leading-16;
+    @apply font-comfortaa text-4xxl leading-13 md:text-4xl md:leading-16;
   }
 }
 
 @layer components {
   .body-1-long {
     @apply text-lg font-normal leading-7 font-comfortaa;
+  }
+
+  .body-1-short {
+    @apply text-lg font-normal leading-6 font-comfortaa;
   }
 }
 

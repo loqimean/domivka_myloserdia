@@ -1,0 +1,9 @@
+@layer components {
+  .btn {
+    @apply p-3 text-center rounded-md cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply text-white bg-blue-600 btn;
+  }
+}

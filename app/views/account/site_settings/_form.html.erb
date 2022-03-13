@@ -1,0 +1,15 @@
+<%= simple_form_for(@site_settings, url: [:account, @site_settings]) do |f| %>
+  <%= f.input :uk_idea_of_project, label: 'Ідея проекту' %>
+  <%= f.input :en_idea_of_project, label: 'Ідея проекту' %>
+  <%= f.input :main_photo, label: 'Фото головної сторінки' %>
+  <%= f.input :uk_address, label: 'Адреса' %>
+  <%= f.input :en_address, label: 'Адреса' %>
+  <%= f.input :uk_payment_details, label: 'Реквізити' %>
+  <%= f.input :en_payment_details, label: 'Реквізити' %>
+  <%= f.input :email %>
+  <%= f.input :facebook_url %>
+  <%= f.input :instagram_url %>
+  <%= f.input :telegram_url %>
+
+  <%= f.submit 'Зберегти', class: 'btn-secondary' %>
+<% end %>
