@@ -1,5 +1,5 @@
-class SituationPhoto < ApplicationRecord
-    mount_uploader :photo, SituationPhotoUploader
+class ActivityPhoto < ApplicationRecord
+    mount_uploader :photo, ActivityPhotoUploader
     
     scope :ordered, -> { order(:created_at) }
     
