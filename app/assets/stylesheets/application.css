@@ -23,7 +23,7 @@
 }
 
 #invoices .swiper-slide {
-  width: 130px !important;
+  width: 155px !important;
   height: 100% !important;
 }
 
@@ -58,5 +58,12 @@
 
   to {
     right: -24rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
   }
 }
