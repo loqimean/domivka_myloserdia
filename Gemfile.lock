@@ -289,6 +289,7 @@ DEPENDENCIES
   devise (~> 4.8)
   factory_bot_rails
   faker
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   kaminari
