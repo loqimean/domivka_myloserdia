@@ -69,3 +69,22 @@
     </div>
   </section>
 <% end %>
+<!-- Activity Photos -->
+<% if @invoices.present? %>
+  <section id="invoices" class="py-10 responsive-container">
+    <h3 class="mb-5"><%= t('.invoices') %></h3>
+    <div class="swiper swiper-container" data-controller="carousel"
+        data-carousel-options-value='{"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
+      <div class="swiper-wrapper">
+        <% @invoices.each do |invoice| %>
+          <%= link_to invoice.file.url, class: 'swiper-slide !px-5' do %>
+            <%= image_tag 'icons/pdf.svg', width: 70 %>
+            <p class="break-words w-28"><%= invoice.file.identifier %></p>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+<% end %>
