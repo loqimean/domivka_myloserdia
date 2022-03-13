@@ -22,7 +22,7 @@
                 <% @situation_photos.each do |situation_photo| %>
                   <tr>
                     <td>
-                      <%= image_tag situation_photo.photo.path, width: 100 %>
+                      <%= image_tag situation_photo.photo.url, width: 100 %>
                     </td>
                     <td class="text-sm font-medium text-right text-blue-600">
                       <%= link_to 'Редагувати', [:edit, :account, situation_photo] %>
