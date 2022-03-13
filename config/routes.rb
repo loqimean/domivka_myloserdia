@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     root 'situation_photos#index'
 
     resources :situation_photos
+    resources :activity_photos
 
     resources :site_settings, only: [:edit, :update]
   end

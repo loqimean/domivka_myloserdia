@@ -1,0 +1,8 @@
+<div id="<%= dom_id activity_photo %>">
+  <%= image_tag activity_photo.photo.url, width: 300 %>
+  <% if action_name != "show" %>
+    <%= link_to 'Переглянути', account_situation_photo, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Редагувати', edit_activity_photo_path(activity_photo), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
