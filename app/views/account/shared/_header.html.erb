@@ -1,8 +1,8 @@
 <nav class="flex justify-between p-5 text-white bg-black shadow-md font-comfortaa responsive-container">
   <%= link_to 'Будинок Милосердя', root_redirection_path(locale: :uk), class: 'font-bold' %>
   <div class="">
-    <%= link_to 'Фото ситуації', [:edit, :account, SiteSetting.first] %>
+    <%= link_to 'Фото ситуації', [:account, :situation_photos] %>
     <span> | </span>
-    <%= link_to 'Налаштування сайту', [:edit, :account, SiteSetting.first] %>
+    <%= link_to 'Налаштування сайту', [:edit, :account, SiteSetting.first || (SiteSetting.new.save(validate: false) && SiteSetting.first)] %>
   </div>
 </nav>
