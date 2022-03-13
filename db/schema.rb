@@ -58,6 +58,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_13_191019) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "invoices", force: :cascade do |t|
+    t.string "file", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "site_settings", force: :cascade do |t|
     t.text "uk_idea_of_project"
     t.text "en_idea_of_project"
