@@ -31,6 +31,15 @@
 
 uk:
   charitable-foundation: Благодійний фонд
+  project-name: Домівка Милосердя
+  activerecord:
+    errors:
+      models:
+        site_setting:
+          attributes:
+            uk_idea_of_project:
+              too_short: занадто коротка
+              blank: не може бути пуста
   home:
     index:
       activity-title: Діяльність

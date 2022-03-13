@@ -1,0 +1,13 @@
+<div class="flex w-full mx-auto md:w-2/3">
+  <div class="mx-auto">
+    <div class="mb-3">
+      <%= render @situation_photo %>
+    </div>
+
+    <%= link_to 'Назад', account_situation_photos_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Редагувати', edit_account_situation_photo_path(@situation_photo), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to 'Видалити', account_situation_photo_path(@situation_photo), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+  </div>
+</div>

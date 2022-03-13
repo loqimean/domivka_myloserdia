@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
-    root 'site_settings#index'
+    root 'situation_photos#index'
+
+    resources :situation_photos
+
+    resources :site_settings, only: [:edit, :update]
   end
 end
