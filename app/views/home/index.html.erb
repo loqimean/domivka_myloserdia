@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="mb-3 md:mb-0 md:p-5">
-      <% if @site_settings.present? %>
+      <% if @site_settings&.main_photo.present? %>
         <%= image_tag @site_settings.main_photo.url %>
       <% end %>
     </div>
