@@ -22,6 +22,11 @@
   opacity: 0.3;
 }
 
+#invoices .swiper-slide {
+  width: 155px !important;
+  height: 100% !important;
+}
+
 .swiper-slide {
   width: 540px !important;
   height: 360px !important;
@@ -34,6 +39,7 @@
 .flash-hide {
   animation: 500ms linear move-to-right;
 }
+
 
 @keyframes move-from-right {
   from {
@@ -52,5 +58,12 @@
 
   to {
     right: -24rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
   }
 }

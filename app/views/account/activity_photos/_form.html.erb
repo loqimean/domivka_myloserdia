@@ -1,0 +1,5 @@
+<%= simple_form_for(activity_photo, url: [:account, activity_photo], html: { class: "contents" }) do |f| %>
+  <%= f.input :photo, label: 'Фото', wrapper_class: 'mb-3' %>
+
+  <%= f.submit 'Зберегти', class: 'btn-secondary' %>
+<% end %>
