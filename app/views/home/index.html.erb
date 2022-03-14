@@ -69,6 +69,21 @@
     </div>
   </section>
 <% end %>
+
+<!-- Reporting -->
+<section class="py-10 responsive-container">
+  <h3 class="mx-auto mb-5 w-fit"><%= t('.reporting') %></h3>
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="flex flex-col items-center p-5 border-r-0 md:border-r">
+      <h5><%= t('.total-collected') %>:</h5>
+      <p class="text-2xl font-bold"><%= @total_collected %> UAH</p>
+    </div>
+    <div class="flex flex-col items-center p-5">
+      <h5><%= t('.number-of-donations') %>:</h5>
+      <p class="text-2xl font-bold"><%= @number_of_donations %></p>
+    </div>
+  </div>
+</section>
 <!-- Invoices -->
 <% if @invoices.present? %>
   <section id="invoices" class="py-10 responsive-container">

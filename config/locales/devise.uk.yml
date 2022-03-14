@@ -1,0 +1,5 @@
+uk:
+  devise:
+    failure:
+      user:
+        unauthenticated: Для початку потрібно ввійти

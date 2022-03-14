@@ -1,0 +1,6 @@
+<%= simple_form_for(payment, url: [:account, payment], html: { class: "contents" }) do |f| %>
+  <%= f.input :name, label: 'Назва', wrapper_class: 'mb-3' %>
+  <%= f.input :sum, as: :numeric, label: 'Сума', wrapper_class: 'mb-3', placeholder: 'like 32.45' %>
+
+  <%= f.submit 'Зберегти', class: 'btn-secondary' %>
+<% end %>

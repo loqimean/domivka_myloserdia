@@ -1,0 +1,54 @@
+<div class="w-full min-h-screen">
+  <div class="flex items-center justify-between mb-5">
+    <h1 class="text-4xl font-bold">Пожертви</h1>
+    <%= link_to 'Створити', new_account_payment_path, class: "btn-secondary" %>
+  </div>
+
+  <div class="flex flex-col">
+    <div>
+      <div class="inline-block min-w-full align-middle">
+        <div class="border-b border-gray-200 shadow sm:rounded-lg">
+          <% if @payments.present? %>
+            <table class="w-full table-element">
+              <thead>
+                <tr>
+                  <th scope="col">Назва</th>
+                  <th scope="col">Сума</th>
+                  <th scope="col" class="tracking-wider"></th>
+                  <th scope="col" class="tracking-wider"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @payments.each do |payment| %>
+                  <tr>
+                    <td>
+                      <%= payment.name %>
+                    </td>
+                    <td>
+                      <%= payment.sum %>
+                    </td>
+                    <td class="text-sm font-medium text-right text-blue-600">
+                      <%= link_to 'Редагувати', [:edit, :account, payment] %>
+                    </td>
+                    <td class="p-auto">
+                      <%= button_to [:account, payment], method: :delete, remote: true, form_class: 'w-fit m-auto' do %>
+                        <%= image_tag 'icons/recyclebin.svg', width: '25px' %>
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <div class="col-md-12 tp-pagination">
+              <%= paginate @payments %>
+            </div>
+          <% else %>
+            <div class="p-5 text-center">
+              <p>На даний момент пожертв немає</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
