@@ -18,5 +18,5 @@ puts 'Start seeding payments'
 FactoryBot.create_list(:payment, 12)
 puts 'success!'
 puts 'Start seeding Partner'
-FactoryBot.create(:partner, 20)
+FactoryBot.create_list(:partner, 20)
 puts 'success!'

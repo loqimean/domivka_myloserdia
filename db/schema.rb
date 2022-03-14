@@ -64,14 +64,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_13_223538) do
     t.datetime "updated_at", null: false
   end
 
-
   create_table "partners", force: :cascade do |t|
     t.string "logo", null: false
+    t.string "web_site_url"
     t.bigint "position", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
 
   create_table "payments", force: :cascade do |t|
     t.string "sum", null: false
@@ -97,7 +96,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_13_223538) do
   end
 
   create_table "situation_photos", force: :cascade do |t|
-    t.string "photo"
+    t.string "photo", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
