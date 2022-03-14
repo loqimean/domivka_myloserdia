@@ -7,3 +7,6 @@ puts 'success!'
 puts 'Start seeding user'
 FactoryBot.create(:user)
 puts 'success!'
+puts 'Start seeding Partner'
+FactoryBot.create(:partner, 20)
+puts 'success!'
