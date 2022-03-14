@@ -1,0 +1,6 @@
+<%= simple_form_for(partner, url: [:account, partner], html: { class: "contents" }) do |f| %>
+  <%= f.input :logo, label: 'Логотип', wrapper_class: 'mb-3' %>
+  <%= f.input :web_site_url, label: 'Сайт', wrapper_class: 'mb-3' %>
+
+  <%= f.submit 'Зберегти', class: 'btn-secondary' %>
+<% end %>

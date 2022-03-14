@@ -103,3 +103,21 @@
     </div>
   </section>
 <% end %>
+<!-- Partners -->
+<% if @partners.present? %>
+  <section id="partners" class="py-10 responsive-container">
+    <h3 class="mb-5"><%= t('.invoices') %></h3>
+    <div class="swiper swiper-container" data-controller="carousel"
+        data-carousel-options-value='{"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
+      <div class="swiper-wrapper">
+        <% @partners.each do |partner| %>
+          <%= link_to partner.web_site_url, class: 'swiper-slide !px-5 flex flex-col items-center' do %>
+            <%= image_tag partner.logo.url, width: 150 %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+<% end %>

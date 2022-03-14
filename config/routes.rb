@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :activity_photos
     resources :invoices, except: [:show]
     resources :payments, except: [:show]
+    resources :partners, except: [:show]
 
     resources :site_settings, only: [:edit, :update]
   end
