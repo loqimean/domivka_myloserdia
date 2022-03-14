@@ -75,7 +75,7 @@
 @layer base {
   h1 {
     @apply font-comfortaa text-4xxl leading-13 md:text-4xl md:leading-16;
-
+  }
 
   h3 {
     @apply text-4xl font-comfortaa leading-13 md:text-3xl md:leading-16;
