@@ -36,3 +36,6 @@ en:
     index:
       activity-title: Activity
       invoices: Invoices
+      reporting: Reporting
+      total-collected: Total collected
+      number-of-donations: Number of donations

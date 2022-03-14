@@ -40,7 +40,16 @@ uk:
             uk_idea_of_project:
               too_short: занадто коротка
               blank: не може бути пуста
+        payment:
+          attributes:
+            name:
+              blank: не може бути пустою
+            sum:
+              blank: не може бути пустою
   home:
     index:
       activity-title: Діяльність
       invoices: Рахунки-фактури
+      reporting: Звітність
+      total-collected: Всього зібрано
+      number-of-donations: Кількість пожертвувань

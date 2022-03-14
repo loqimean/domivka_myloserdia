@@ -1,3 +1,10 @@
+puts 'Start seeding SiteSetting'
+FactoryBot.create(:site_setting)
+puts 'success!'
+puts 'Start seeding user'
+FactoryBot.create(:user)
+puts 'success!'
+
 puts 'Start seeding SituationPhoto'
 FactoryBot.create_list(:situation_photo, 20)
 puts 'success!'
@@ -7,9 +14,6 @@ puts 'success!'
 puts 'Start seeding Invoices'
 FactoryBot.create_list(:invoice, 20)
 puts 'success!'
-puts 'Start seeding SiteSetting'
-FactoryBot.create(:site_setting)
-puts 'success!'
-puts 'Start seeding user'
-FactoryBot.create(:user)
+puts 'Start seeding payments'
+FactoryBot.create_list(:payment, 12)
 puts 'success!'
