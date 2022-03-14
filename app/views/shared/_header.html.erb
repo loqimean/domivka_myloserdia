@@ -1,5 +1,6 @@
 <nav class="fixed z-20 flex justify-center w-full py-5 text-white bg-black shadow-md responsive-container">
   <%= link_to root_path, class: 'flex ml-auto' do %>
+    <%= image_tag 'logo.png', width: 25, class: 'mr-2' %>
     <p class="hidden mr-2 sm:inline"><%= t('charitable-foundation') %></p>
     <span class="font-bold font-comfortaa">"<%= t('project-name') %>"</span>
   <% end %>
