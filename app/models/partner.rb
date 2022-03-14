@@ -1,5 +1,5 @@
 class Partner < ApplicationRecord
-    mount_uploader :logo, :position, ActivityPhotoUploader
+    mount_uploader :logo, PartnerUploader
 
     scope :ordered, -> { order(:created_at) }
 
