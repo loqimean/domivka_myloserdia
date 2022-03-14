@@ -1,0 +1,11 @@
+<div class="w-full mx-auto md:w-2/3">
+<section class="w-full min-h-screen mb-3 md:px-28">
+  <div class="w-full p-5 bg-white border rounded-md">
+    <h1 class="text-4xl font-bold">Редагування фото</h1>
+
+    <%= render "account/situation_photos/form", situation_photo: @situation_photo %>
+
+    <%= link_to 'Назад', account_situation_photos_path, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Переглянути', [:account, @situation_photo], class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+  </div>
+</section>

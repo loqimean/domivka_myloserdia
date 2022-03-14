@@ -1,0 +1,5 @@
+<%= simple_form_for(invoice, url: [:account, invoice], html: { class: "contents" }) do |f| %>
+  <%= f.input :file, label: 'Рахунок-фактура', wrapper_class: 'mb-3' %>
+
+  <%= f.submit 'Зберегти', class: 'btn-secondary' %>
+<% end %>

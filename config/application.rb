@@ -31,6 +31,13 @@ module DomivkaMyloserdia
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    config.i18n.locale = :uk
+    config.i18n.default_locale = :uk
+    config.i18n.available_locales = [:uk, :en]
+    config.i18n.enforce_available_locales = false
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

@@ -12,4 +12,58 @@
  *
  *= require_tree .
  *= require_self
+ *= require swiper-bundle.min.css
  */
+
+@import 'actiontext.css';
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  color: white;
+  opacity: 0.3;
+}
+
+#invoices .swiper-slide {
+  width: 155px !important;
+  height: 100% !important;
+}
+
+.swiper-slide {
+  width: 540px !important;
+  height: 360px !important;
+}
+
+.flash-show {
+  animation: 500ms linear move-from-right;
+}
+
+.flash-hide {
+  animation: 500ms linear move-to-right;
+}
+
+
+@keyframes move-from-right {
+  from {
+    right: -24rem;
+  }
+
+  to {
+    right: 0.25rem;
+  }
+}
+
+@keyframes move-to-right {
+  from {
+    right: 0.25rem;
+  }
+
+  to {
+    right: -24rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

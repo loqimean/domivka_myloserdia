@@ -1,0 +1,54 @@
+<div class="w-full min-h-screen">
+  <div class="flex items-center justify-between mb-5">
+    <h1 class="text-4xl font-bold">Фото активностей</h1>
+    <%= link_to 'Створити', new_account_activity_photo_path, class: "btn-secondary" %>
+  </div>
+
+  <div class="flex flex-col">
+    <div>
+      <div class="inline-block min-w-full align-middle">
+        <div class="border-b border-gray-200 shadow sm:rounded-lg">
+          <% if @activity_photos.present? %>
+            <table class="w-full table-element">
+              <thead>
+                <tr>
+                  <th scope="col">Фото</th>
+                  <th scope="col" class="tracking-wider"></th>
+                  <th scope="col" class="tracking-wider"></th>
+                  <th scope="col" class="tracking-wider"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @activity_photos.each do |activity_photo| %>
+                  <tr>
+                    <td>
+                      <%= image_tag activity_photo.photo.url, width: 100 %>
+                    </td>
+                    <td class="text-sm font-medium text-right text-blue-600">
+                      <%= link_to 'Редагувати', [:edit, :account, activity_photo] %>
+                    </td>
+                    <td class="text-sm font-medium text-right text-blue-500">
+                      <%= link_to 'Переглянути', [:account, activity_photo] %>
+                    </td>
+                    <td class="p-auto">
+                      <%= button_to [:account, activity_photo], method: :delete, remote: true, form_class: 'w-fit m-auto' do %>
+                        <%= image_tag 'icons/recyclebin.svg', width: '25px' %>
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <div class="col-md-12 tp-pagination">
+              <%= paginate @activity_photos %>
+            </div>
+          <% else %>
+            <div class="p-5 text-center">
+              <p>На даний момент фото не добавлені</p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

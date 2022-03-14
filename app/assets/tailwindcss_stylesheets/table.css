@@ -1,0 +1,21 @@
+@layer components {
+  .table-element {
+    @apply w-full divide-y divide-gray-200;
+  }
+
+  .table-element > thead {
+    @apply bg-gray-50;
+  }
+
+  .table-element > thead > tr > th {
+    @apply px-3 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase;
+  }
+
+  .table-element > tbody {
+    @apply bg-white divide-y divide-gray-200;
+  }
+
+  .table-element > tbody > tr > td {
+    @apply py-3 px-3 !whitespace-normal;
+  }
+}

@@ -30,4 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  charitable-foundation: Charitable Foundation
+  project-name: Home of Mercy
+  home:
+    index:
+      activity-title: Activity
+      invoices: Invoices
