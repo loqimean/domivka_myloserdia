@@ -83,3 +83,6 @@ gem "devise", "~> 4.8"
 
 gem "carrierwave", "~> 2.2"
 gem 'kaminari'
+
+gem 'mini_magick'
+gem 'fog'
