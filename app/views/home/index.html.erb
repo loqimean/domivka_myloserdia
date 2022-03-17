@@ -17,18 +17,20 @@
 <% end %>
 <!-- Payment details -->
 <section class="py-10 text-center responsive-container">
-  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2">
     <div class="flex flex-col items-center py-5">
-      <%= image_tag 'icons/map.svg', class: 'w-6 mb-5' %>
-      <p class="body 1-short"><%= @site_settings&.send(:"#{I18n.locale}_address") %></p>
+      <%= image_tag 'icons/map.svg', class: 'w-8 mb-5' %>
+      <p class="body 1-short">
+        <%= @site_settings&.send(:"#{I18n.locale}_address") %>
+        <%= phone_to @site_settings&.phone %>
+        <%= mail_to @site_settings&.email %>
+      </p>
     </div>
     <div class="flex flex-col items-center py-5">
-      <%= image_tag 'icons/cash.svg', class: 'w-6 mb-5' %>
-      <p class="px-10 body 1-short md:px-0"><%= @site_settings&.send(:"#{I18n.locale}_payment_details") %></p>
-    </div>
-    <div class="flex flex-col items-center py-5">
-      <%= image_tag 'icons/mail-open.svg', class: 'w-6 mb-5' %>
-      <p class="body 1-short"><%= @site_settings&.email %></p>
+      <%= image_tag 'icons/cash.svg', class: 'w-8 mb-5' %>
+      <p class="px-10 body 1-short md:px-0">
+        <%= @site_settings&.send(:"#{I18n.locale}_payment_details") %>
+      </p>
     </div>
   </div>
 </section>

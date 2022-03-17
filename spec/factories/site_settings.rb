@@ -6,6 +6,7 @@ FactoryBot.define do
     uk_address { Faker::Address.full_address }
     en_address { I18n.locale = :en; Faker::Address.full_address }
     email { Faker::Internet.email }
+    phone { Faker::PhoneNumber.cell_phone }
     uk_payment_details {
       'ПрАТ "ВНЗ "МАУП", 03039, м. Київ, вул. Фрометівська, 2, АТ «ТАСкомбанк», ' \
       'Код ЄДРПОУ 00127522, IBAN  UA443395000000026008040388001, Призначення ' \

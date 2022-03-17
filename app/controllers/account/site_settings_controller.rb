@@ -25,6 +25,7 @@ class Account::SiteSettingsController < Account::AccountController
     params.require(:site_setting).permit(:uk_idea_of_project, :en_idea_of_project,
                                          :main_photo, :uk_address, :en_address,
                                          :uk_payment_details, :en_payment_details,
-                                         :email, :facebook_url, :instagram_url, :telegram_url)
+                                         :email, :facebook_url, :instagram_url,
+                                         :telegram_url, :phone)
   end
 end
