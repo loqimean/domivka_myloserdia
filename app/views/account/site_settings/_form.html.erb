@@ -2,10 +2,11 @@
   <%= f.input :uk_idea_of_project, label: 'Ідея проекту - українською' %>
   <%= f.input :en_idea_of_project, label: 'Ідея проекту - англійською' %>
   <%= f.input :main_photo, label: 'Фото головної сторінки' %>
-  <%= f.input :uk_address, label: 'Адреса - українською' %>
-  <%= f.input :en_address, label: 'Адреса - англійською' %>
+  <%= f.input :uk_address, as: :rich_text_area, label: 'Адреса - українською' %>
+  <%= f.input :en_address, as: :rich_text_area, label: 'Адреса - англійською' %>
   <%= f.input :uk_payment_details, as: :rich_text_area, label: 'Реквізити - українською' %>
   <%= f.input :en_payment_details, as: :rich_text_area, label: 'Реквізити - англійською' %>
+  <%= f.input :phone, label: 'Номер телефону' %>
   <%= f.input :email %>
   <%= f.input :facebook_url %>
   <%= f.input :instagram_url %>

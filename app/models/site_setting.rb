@@ -6,4 +6,6 @@ class SiteSetting < ApplicationRecord
 
   has_rich_text :uk_payment_details
   has_rich_text :en_payment_details
+  has_rich_text :uk_address
+  has_rich_text :en_address
 end
