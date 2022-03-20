@@ -2,7 +2,7 @@
 <% if @situation_photos.present? %>
   <section>
     <div class="swiper swiper-container" data-controller="carousel"
-        data-carousel-options-value='{"autoplay": {"delay": 2500, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
+        data-carousel-options-value='{"autoplay": {"delay": 6000, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
       <div class="swiper-wrapper">
         <% @situation_photos.each do |photo| %>
           <div class="flex justify-center swiper-slide">
@@ -58,7 +58,7 @@
 <% if @activity_photos.present? %>
   <section>
     <div class="swiper swiper-container" data-controller="carousel"
-        data-carousel-options-value='{"autoplay": {"delay": 2500, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
+        data-carousel-options-value='{"autoplay": {"delay": 6000, "disableOnInteraction": false},"navigation": {"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}, "loop": true, "slidesPerView": "auto"}'>
       <div class="swiper-wrapper">
         <% @activity_photos.each do |photo| %>
           <div class="flex justify-center swiper-slide">
@@ -73,19 +73,21 @@
 <% end %>
 
 <!-- Reporting -->
-<section class="py-10 responsive-container">
-  <h3 class="mx-auto mb-5 w-fit"><%= t('.reporting') %></h3>
-  <div class="grid grid-cols-1 md:grid-cols-2">
-    <div class="flex flex-col items-center p-5 border-r-0 md:border-r">
-      <h5><%= t('.total-collected') %>:</h5>
-      <p class="text-2xl font-bold"><%= @total_collected %> UAH</p>
+<% if ENV['SHOW_REPORTING'].present? %>
+  <section class="py-10 responsive-container">
+    <h3 class="mx-auto mb-5 w-fit"><%= t('.reporting') %></h3>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+      <div class="flex flex-col items-center p-5 border-r-0 md:border-r">
+        <h5><%= t('.total-collected') %>:</h5>
+        <p class="text-2xl font-bold"><%= @total_collected %> UAH</p>
+      </div>
+      <div class="flex flex-col items-center p-5">
+        <h5><%= t('.number-of-donations') %>:</h5>
+        <p class="text-2xl font-bold"><%= @number_of_donations %></p>
+      </div>
     </div>
-    <div class="flex flex-col items-center p-5">
-      <h5><%= t('.number-of-donations') %>:</h5>
-      <p class="text-2xl font-bold"><%= @number_of_donations %></p>
-    </div>
-  </div>
-</section>
+  </section>
+<% end %>
 <!-- Invoices -->
 <% if @invoices.present? %>
   <section id="invoices" class="py-10 responsive-container">
