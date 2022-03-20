@@ -86,4 +86,3 @@ gem 'kaminari'
 
 gem 'mini_magick'
 gem 'fog'
-gem 'google-analytics-rails', '1.1.0'

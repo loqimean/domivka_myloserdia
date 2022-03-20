@@ -312,7 +312,6 @@ GEM
     formatador (0.3.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    google-analytics-rails (1.1.0)
     google-apis-compute_v1 (0.28.0)
       google-apis-core (>= 0.4, < 2.a)
     google-apis-core (0.4.2)
@@ -572,7 +571,6 @@ DEPENDENCIES
   factory_bot_rails
   faker
   fog
-  google-analytics-rails (= 1.1.0)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder

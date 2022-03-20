@@ -12,7 +12,8 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
+
+    <%= render 'shared/ga' if Rails.env.production? %>
   </head>
 
   <body class="bg-gray-50">
