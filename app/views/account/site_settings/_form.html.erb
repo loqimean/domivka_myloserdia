@@ -1,6 +1,6 @@
 <%= simple_form_for(@site_settings, url: [:account, @site_settings]) do |f| %>
-  <%= f.input :uk_idea_of_project, label: 'Ідея проекту - українською' %>
-  <%= f.input :en_idea_of_project, label: 'Ідея проекту - англійською' %>
+  <%= f.input :uk_idea_of_project, as: :rich_text_area, label: 'Ідея проекту - українською' %>
+  <%= f.input :en_idea_of_project, as: :rich_text_area, label: 'Ідея проекту - англійською' %>
   <%= f.input :main_photo, label: 'Фото головної сторінки' %>
   <%= f.input :uk_address, as: :rich_text_area, label: 'Адреса - українською' %>
   <%= f.input :en_address, as: :rich_text_area, label: 'Адреса - англійською' %>
